@@ -98,7 +98,7 @@ const STORAGE_KEY = "taskflow.tasks.v1"
     },
     pro: {
         label: "Pro",
-        aiDaily: 500,
+        aiDaily: 500,   
         storageBytes: 104857600,
         itemLimit: 2e4,
         uiPresetLimit: 12,

@@ -18,12 +18,7 @@ window.TASKFLOW_AI = {
 
 window.TASKFLOW_SECURITY = {
   allowedHosts: [
-    "taskflow-northbyte.web.app",
-    "taskflow-20341.web.app",
-    "taskflowx1.netlify.app",
-    "taskflowonline.netlify.app",
-    "https://taskflow.benjamin-magro.workers.dev",
-    "taskflowonline.publicvm.com",
+    "https://insertnewusername.github.io/flowtask/",
     "localhost",
     "127.0.0.1",
     "::1",
