@@ -1,0 +1,1701 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+    <head>
+        <!-- TaskFlow proprietary software. Public files are protected by the consolidated Terms, Proprietary License, and Fair Use Policy. -->
+        <!-- TaskFlow is proprietary software. Copying, cloning, redistributing, or reusing this app without written permission is prohibited. -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="TaskFlow is a private planning app with account sync, tasks, events, notes, calendar, focus mode, analytics, backups, and optional encrypted sync.">
+        <meta name="theme-color" content="#137a63">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="TaskFlow">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <title>TaskFlow - Task Tracker</title>
+        <link rel="manifest" href="manifest.webmanifest">
+        <link rel="icon" type="image/svg+xml" href="favicon.svg">
+        <link rel="apple-touch-icon" href="icons/icon-192.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="auth-loading">
+        <section class="boot-screen" aria-label="TaskFlow loading">
+            <div class="boot-card">
+                <span class="brand-mark boot-mark" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <div>
+                    <strong>TaskFlow</strong>
+                    <span id="authLoadingMessage">Opening your workspace...</span>
+                </div>
+            </div>
+        </section>
+        <section class="landing-page" id="landingPage" aria-label="TaskFlow overview">
+            <header class="landing-nav">
+                <a class="landing-brand" href="#landingPage" aria-label="TaskFlow home">
+                    <span class="brand-mark" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span>TaskFlow</span>
+                </a>
+                <nav class="landing-links" aria-label="Landing navigation">
+                    <a href="#landingFeatures">Features</a>
+                    <a href="#landingWorkflow">Workflow</a>
+                    <a href="#landingUses">Use cases</a>
+                    <a href="#landingAllFeatures">Everything</a>
+                    <a href="advantages.html">Why TaskFlow</a>
+                    <button class="button ghost" type="button" data-auth-open>Log in</button>
+                </nav>
+            </header>
+            <main>
+                <section class="landing-hero">
+                    <div class="landing-preview-scene" aria-hidden="true">
+                        <div class="preview-shell">
+                            <div class="preview-sidebar">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="preview-main">
+                                <div class="preview-topline"></div>
+                                <div class="preview-grid">
+                                    <div class="preview-column landing-reveal">
+                                        <strong>Today</strong>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="preview-column active landing-reveal">
+                                        <strong>Events</strong>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="preview-column landing-reveal">
+                                        <strong>Focus</strong>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preview-note">Send proposal by 4pm</div>
+                        <div class="preview-event">Project review 9:00</div>
+                        <div class="preview-sync">Synced</div>
+                        <div class="preview-focus">Focus mode ready</div>
+                        <div class="preview-calendar">Calendar + events</div>
+                    </div>
+                    <div class="landing-hero-content landing-reveal">
+                        <p class="eyebrow">Tasks, events, notes, and focus in one place</p>
+                        <h1>Plan the week without losing the little things.</h1>
+                        <p>TaskFlow turns quick thoughts into organised tasks, keeps events beside your calendar, and syncs your workspace across devices.</p>
+                        <div class="landing-actions">
+                            <button class="button primary" type="button" data-auth-open>
+                                <i data-lucide="sparkles"></i>
+                                Start planning
+                            </button>
+                            <button class="button ghost" type="button" data-auth-open>
+                                <i data-lucide="log-in"></i>
+                                Log in
+                            </button>
+                        </div>
+                        <p class="landing-terms">
+                            By using TaskFlow, you agree to the <a href="TERMS.html" target="_blank" rel="noopener">Terms, Proprietary License, and Fair Use Policy</a>
+                            and acknowledge the <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>
+                            . <a href="advantages.html">Why TaskFlow is different</a>
+                            .
+                        </p>
+                        <div class="landing-hero-stats" aria-label="TaskFlow highlights">
+                            <span>
+                                <strong>Smart</strong>
+                                natural capture
+                            </span>
+                            <span>
+                                <strong>Synced</strong>
+                                account workspace
+                            </span>
+                            <span>
+                                <strong>Private</strong>
+                                optional encryption
+                            </span>
+                        </div>
+                    </div>
+                </section>
+                <section class="landing-marquee" aria-label="TaskFlow capabilities">
+                    <div>
+                        <span>AI Assist</span>
+                        <span>Kanban board</span>
+                        <span>Event timeline</span>
+                        <span>ICS import</span>
+                        <span>Google Calendar sync</span>
+                        <span>Focus timer</span>
+                        <span>General notes</span>
+                        <span>Private sync</span>
+                        <span>Offline protection</span>
+                        <span>JSON backups</span>
+                        <span>Custom UI</span>
+                    </div>
+                    <div aria-hidden="true">
+                        <span>AI Assist</span>
+                        <span>Kanban board</span>
+                        <span>Event timeline</span>
+                        <span>ICS import</span>
+                        <span>Google Calendar sync</span>
+                        <span>Focus timer</span>
+                        <span>General notes</span>
+                        <span>Private sync</span>
+                        <span>Offline protection</span>
+                        <span>JSON backups</span>
+                        <span>Custom UI</span>
+                    </div>
+                </section>
+                <section class="landing-feature-strip" id="landingFeatures" aria-label="TaskFlow features">
+                    <article class="landing-reveal">
+                        <i data-lucide="wand-sparkles"></i>
+                        <strong>AI Assist</strong>
+                        <span>Type naturally and TaskFlow finds dates, priorities, tags, and steps.</span>
+                    </article>
+                    <article class="landing-reveal">
+                        <i data-lucide="calendar-check"></i>
+                        <strong>Events</strong>
+                        <span>Track meetings, appointments, routines, and follow-up tasks.</span>
+                    </article>
+                    <article class="landing-reveal">
+                        <i data-lucide="cloud-check"></i>
+                        <strong>Sync</strong>
+                        <span>Sign in once and keep your tasks, events, and notes together.</span>
+                    </article>
+                </section>
+                <section class="landing-showcase" id="landingWorkflow" aria-label="TaskFlow workflow">
+                    <div class="showcase-copy landing-reveal">
+                        <p class="eyebrow">A cleaner way from thought to done</p>
+                        <h2>Drop in a messy thought. Watch it become a plan.</h2>
+                        <p>AI Assist can turn natural language into due dates, times, tags, projects, and steps, then carry the work through events, calendar, notes, and focus.</p>
+                    </div>
+                    <div class="showcase-stage landing-reveal">
+                        <div class="smart-demo-card">
+                            <span>AI Assist</span>
+                            <strong>Prepare launch notes by 4pm today</strong>
+                            <p>@Product #review !high</p>
+                        </div>
+                        <div class="flow-line" aria-hidden="true"></div>
+                        <div class="smart-result-grid">
+                            <article>
+                                <i data-lucide="calendar-clock"></i>
+                                <strong>Today 4:00 pm</strong>
+                                <span>Due date found</span>
+                            </article>
+                            <article>
+                                <i data-lucide="list-checks"></i>
+                                <strong>3 subtasks</strong>
+                                <span>Draft, review, submit</span>
+                            </article>
+                            <article>
+                                <i data-lucide="folder-kanban"></i>
+                                <strong>Product</strong>
+                                <span>Project sorted</span>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <section class="landing-flowboard" aria-label="TaskFlow planning flow">
+                    <div class="landing-reveal">
+                        <p class="eyebrow">One workspace, many modes</p>
+                        <h2>Capture, organise, schedule, focus, finish.</h2>
+                    </div>
+                    <div class="flowboard-steps">
+                        <article class="landing-reveal">
+                            <span>01</span>
+                            <i data-lucide="mic-2"></i>
+                            <h3>Capture the thought</h3>
+                            <p>Write the messy version first. TaskFlow pulls out the structure.</p>
+                        </article>
+                        <article class="landing-reveal">
+                            <span>02</span>
+                            <i data-lucide="kanban"></i>
+                            <h3>Organise the work</h3>
+                            <p>Move between board, list, calendar, analytics, events, and focus views.</p>
+                        </article>
+                        <article class="landing-reveal">
+                            <span>03</span>
+                            <i data-lucide="calendar-days"></i>
+                            <h3>See the week</h3>
+                            <p>Tasks and events sit together so deadlines do not hide from meetings.</p>
+                        </article>
+                        <article class="landing-reveal">
+                            <span>04</span>
+                            <i data-lucide="badge-check"></i>
+                            <h3>Finish cleanly</h3>
+                            <p>Create follow-ups, check off subtasks, and keep notes for next time.</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="landing-section" id="landingUses">
+                    <div class="landing-reveal">
+                        <p class="eyebrow">Made for mixed weeks</p>
+                        <h2>Work, home, study, health, and everyday planning can share one calm workspace.</h2>
+                    </div>
+                    <div class="landing-use-grid">
+                        <article class="landing-reveal">
+                            <i data-lucide="briefcase-business"></i>
+                            <h3>Work</h3>
+                            <p>Capture deadlines, meetings, follow-ups, and the small actions that keep projects moving.</p>
+                        </article>
+                        <article class="landing-reveal">
+                            <i data-lucide="presentation"></i>
+                            <h3>Life admin</h3>
+                            <p>Plan appointments, bills, chores, errands, and recurring routines beside your tasks.</p>
+                        </article>
+                        <article class="landing-reveal">
+                            <i data-lucide="timer"></i>
+                            <h3>Focus</h3>
+                            <p>Switch from planning to doing with a focus queue, planned work blocks, and clear next actions.</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="landing-detail-wall" aria-label="More TaskFlow details">
+                    <article class="detail-wide landing-reveal">
+                        <span>Calendar + events</span>
+                        <h2>Deadlines, appointments, and focus blocks finally sit together.</h2>
+                        <p>See tasks and events on the same calendar, import .ics files, and sync TaskFlow-owned events to Google Calendar.</p>
+                    </article>
+                    <article class="landing-reveal">
+                        <span>General notes</span>
+                        <h3>Loose thoughts get a home.</h3>
+                        <p>Keep scratch notes beside your board without turning every thought into a task.</p>
+                    </article>
+                    <article class="landing-reveal">
+                        <span>Private workspace</span>
+                        <h3>Your account keeps it together.</h3>
+                        <p>Sign in once, then bring your tasks, events, notes, and saved layouts across devices.</p>
+                    </article>
+                </section>
+                <section class="landing-feature-matrix" id="landingAllFeatures" aria-label="All TaskFlow features">
+                    <div class="matrix-head landing-reveal">
+                        <p class="eyebrow">Everything packed in</p>
+                        <h2>More than a todo list.</h2>
+                        <p>TaskFlow combines quick capture, planning, events, focus tools, sync, installable app support, private sync, and backups.</p>
+                    </div>
+                    <div class="matrix-grid">
+                        <article class="matrix-card primary landing-reveal">
+                            <i data-lucide="sparkles"></i>
+                            <h3>AI quick capture</h3>
+                            <p>Understands dates like tonight, tomorrow, Fridays, next week, times, priorities, tags, projects, estimates, recurrence, and subtasks.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="kanban"></i>
+                            <h3>Board + List</h3>
+                            <p>Plan visually or scan everything in a compact list with filters and sorting.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="calendar-days"></i>
+                            <h3>Calendar view</h3>
+                            <p>Due dates, due times, and events appear together for week-level planning.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="presentation"></i>
+                            <h3>Events timeline</h3>
+                            <p>Recurring events, previous and upcoming events, inline notes, and follow-up task creation.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="file-input"></i>
+                            <h3>ICS import</h3>
+                            <p>Import calendar and timetable files, including recurring events.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="calendar-check"></i>
+                            <h3>Google Calendar sync</h3>
+                            <p>Two-way sync for events and scheduled tasks, with TaskFlow overwriting its own calendar items.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="timer"></i>
+                            <h3>Focus mode</h3>
+                            <p>A task queue and timer for switching from planning mode into doing mode.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="sticky-note"></i>
+                            <h3>General notes</h3>
+                            <p>A home for loose thoughts that should not become tasks yet.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="bar-chart-3"></i>
+                            <h3>Analytics</h3>
+                            <p>See workload, completion, priority mix, estimates, and project spread.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="cloud-check"></i>
+                            <h3>Account sync</h3>
+                            <p>Tasks, events, and notes sync through your account and stay available on this device.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="lock-keyhole"></i>
+                            <h3>Optional private sync</h3>
+                            <p>Use a passphrase to encrypt task, event, and note content before it is stored in the cloud.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="download-cloud"></i>
+                            <h3>Installable PWA</h3>
+                            <p>Install TaskFlow on supported desktop and mobile browsers.</p>
+                        </article>
+                        <article class="matrix-card landing-reveal">
+                            <i data-lucide="shield-check"></i>
+                            <h3>Trusted access</h3>
+                            <p>Official TaskFlow access checks, proprietary terms, and account-first protection help keep the service consistent.</p>
+                        </article>
+                    </div>
+                </section>
+                <section class="landing-sync-showcase" aria-label="Sync and protection">
+                    <div class="sync-orbit landing-reveal" aria-hidden="true">
+                        <span>Tasks</span>
+                        <span>Events</span>
+                        <span>Notes</span>
+                        <span>Calendar</span>
+                        <strong>TaskFlow</strong>
+                    </div>
+                    <div class="landing-reveal">
+                        <p class="eyebrow">Built to move with you</p>
+                        <h2>Your planning system should follow your devices.</h2>
+                        <p>Use TaskFlow in the browser, install it as a PWA, back it up as JSON, and keep your workspace synced when you sign in.</p>
+                        <div class="sync-pills">
+                            <span>
+                                <i data-lucide="wifi"></i>
+                                Offline protection
+                            </span>
+                            <span>
+                                <i data-lucide="refresh-cw"></i>
+                                Manual sync
+                            </span>
+                            <span>
+                                <i data-lucide="download"></i>
+                                Export backups
+                            </span>
+                            <span>
+                                <i data-lucide="lock-keyhole"></i>
+                                Optional encrypted sync
+                            </span>
+                        </div>
+                    </div>
+                </section>
+                <section class="landing-final landing-reveal">
+                    <p class="eyebrow">Your week, less scattered</p>
+                    <h2>Ready to make the next thing obvious?</h2>
+                    <p>Start with one messy sentence. TaskFlow will help you turn it into a plan.</p>
+                    <button class="button primary" type="button" data-auth-open>
+                        <i data-lucide="arrow-right"></i>
+                        Start planning
+                    </button>
+                </section>
+                <footer class="brand-footer">TaskFlow by Northbyte</footer>
+            </main>
+        </section>
+        <section class="auth-gate" id="authGate" aria-label="TaskFlow sign in">
+            <div class="auth-card">
+                <div class="auth-brand">
+                    <span class="brand-mark auth-mark" aria-hidden="true">
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </span>
+                    <div>
+                        <strong>TaskFlow</strong>
+                        <span>by Northbyte</span>
+                    </div>
+                </div>
+                <button class="auth-back" id="authBackBtn" type="button">
+                    <i data-lucide="arrow-left"></i>
+                    Back to overview
+                </button>
+                <div class="auth-copy">
+                    <h1>Sign in with your Northbyte account</h1>
+                    <p>Use one Northbyte account to sync TaskFlow across your devices.</p>
+                    <p class="auth-legal-note">
+                        By using TaskFlow, you agree to the <a href="TERMS.html" target="_blank" rel="noopener">Terms, Proprietary License, and Fair Use Policy</a>
+                        and acknowledge the <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>
+                        .
+                    </p>
+                </div>
+                <form id="authPasswordForm" class="auth-form">
+                    <label class="form-row">
+                        <span>Email</span>
+                        <input id="authEmailInput" type="email" autocomplete="email" required placeholder="you@example.com">
+                    </label>
+                    <label class="form-row">
+                        <span>Password</span>
+                        <input id="authPasswordInput" type="password" autocomplete="current-password" required minlength="6">
+                    </label>
+                    <label class="auth-check">
+                        <input id="migrateLocalInput" type="checkbox">
+                        <span>Bring my tasks from this browser into this account</span>
+                    </label>
+                    <button class="button google-button" id="googleSignInBtn" type="button">
+                        <span class="google-mark" aria-hidden="true">G</span>
+                        Continue with Google
+                    </button>
+                    <label class="auth-check auth-terms">
+                        <input id="termsAcceptInput" type="checkbox">
+                        <span>
+                            I agree to the TaskFlow <a href="TERMS.html" target="_blank" rel="noopener">Terms, Proprietary License, and Fair Use Policy</a>
+                            and acknowledge the <a href="privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>
+                            .
+                        </span>
+                    </label>
+                    <div class="auth-actions auth-password-actions">
+                        <button class="button primary" id="signInBtn" type="submit">
+                            <i data-lucide="log-in"></i>
+                            Sign in
+                        </button>
+                        <button class="button ghost" id="createAccountBtn" type="button">
+                            <i data-lucide="user-plus"></i>
+                            Create account
+                        </button>
+                    </div>
+                    <button class="link-button" id="forgotPasswordBtn" type="button">Send password reset email</button>
+                </form>
+                <p class="auth-message" id="authMessage">Checking for an existing session...</p>
+                <footer class="brand-footer auth-footer">TaskFlow by Northbyte</footer>
+            </div>
+        </section>
+        <div class="app-shell">
+            <aside class="sidebar" aria-label="Workspace navigation">
+                <div class="brand-row">
+                    <div class="brand">
+                        <span class="brand-mark" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                        <span>TaskFlow</span>
+                    </div>
+                    <button class="icon-button" id="themeToggle" type="button" title="Customize UI" aria-label="Customize UI">
+                        <i data-lucide="palette"></i>
+                    </button>
+                </div>
+                <nav class="nav-block" aria-label="Smart views">
+                    <div class="nav-title">Focus</div>
+                    <div id="smartViews" class="nav-list"></div>
+                </nav>
+                <nav class="nav-block" aria-label="Projects">
+                    <div class="nav-title">Projects</div>
+                    <div id="projectNav" class="nav-list"></div>
+                </nav>
+                <nav class="nav-block tag-block" aria-label="Tags">
+                    <div class="nav-title">Tags</div>
+                    <div id="tagNav" class="tag-cloud"></div>
+                </nav>
+                <div class="sidebar-footer">
+                    <div class="mini-stat">
+                        <span id="completionRing" class="ring" aria-hidden="true"></span>
+                        <div>
+                            <strong id="completionLabel">0%</strong>
+                            <span>completion</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main class="main-shell">
+                <header class="topbar">
+                    <form class="quick-capture" id="quickForm">
+                        <i data-lucide="sparkles"></i>
+                        <textarea id="quickInput" rows="1" placeholder="Ask AI Assist to add, edit, schedule, or complete tasks and events..." aria-label="AI Assist"></textarea>
+                        <button class="icon-button ai-help-button" id="aiAssistHelpBtn" type="button" aria-label="What can AI Assist do?" title="What can AI Assist do?">
+                            <i data-lucide="circle-help"></i>
+                        </button>
+                        <button class="button primary" type="submit" title="Run AI Assist" aria-label="Run AI Assist">
+                            <i data-lucide="wand-sparkles"></i>
+                            AI assist
+                        </button>
+                    </form>
+                    <div class="activity-pulse is-hidden" id="activityPulse" aria-live="polite" aria-atomic="true"></div>
+                    <div class="top-actions">
+                        <button class="save-status" id="saveStatus" type="button" title="Sync now" aria-label="Sync now">
+                            <i data-lucide="cloud"></i>
+                            Sync ready
+                        </button>
+                        <span class="account-chip" id="accountChip" title="Account" aria-label="Account">
+                            <i data-lucide="user-circle"></i>
+                            Account 
+                        </span>
+                        <button class="button ghost" id="accountSettingsBtn" type="button" title="Settings" aria-label="Settings">
+                            <i data-lucide="settings"></i>
+                            Settings
+                        </button>
+                        <input id="importFile" type="file" accept="application/json" hidden>
+                        <button class="button ghost" id="installAppBtn" type="button" title="Install app" aria-label="Install app" hidden>
+                            <i data-lucide="download-cloud"></i>
+                            Install app
+                        </button>
+                        <button class="button primary" id="newTaskBtn" type="button" title="New task" aria-label="New task">
+                            <i data-lucide="plus"></i>
+                            New task
+                        </button>
+                        <button class="button primary" id="newMeetingTopBtn" type="button" title="New event" aria-label="New event">
+                            <i data-lucide="calendar-plus"></i>
+                            New event
+                        </button>
+                    </div>
+                </header>
+                <section class="metric-strip" id="metrics" aria-label="Task metrics"></section>
+                <section class="filter-panel" aria-label="Task filters">
+                    <label class="search-field">
+                        <i data-lucide="search"></i>
+                        <input id="searchInput" type="search" placeholder="Search tasks, notes, tags">
+                    </label>
+                    <label>
+                        <span>Project</span>
+                        <select id="projectFilter"></select>
+                    </label>
+                    <label>
+                        <span>Tag</span>
+                        <select id="tagFilter"></select>
+                    </label>
+                    <label>
+                        <span>Priority</span>
+                        <select id="priorityFilter">
+                            <option value="all">All priorities</option>
+                            <option value="urgent">Urgent</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Due</span>
+                        <select id="dueFilter">
+                            <option value="all">Any date</option>
+                            <option value="overdue">Overdue</option>
+                            <option value="today">Today</option>
+                            <option value="upcoming">Next 7 days</option>
+                            <option value="unscheduled">No due date</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Sort</span>
+                        <select id="sortSelect">
+                            <option value="due">Due date</option>
+                            <option value="priority">Priority</option>
+                            <option value="created">Newest</option>
+                            <option value="title">Title</option>
+                            <option value="estimate">Estimate</option>
+                        </select>
+                    </label>
+                    <button class="button ghost" id="clearFiltersBtn" type="button">
+                        <i data-lucide="x"></i>
+                        Clear
+                    </button>
+                </section>
+                <section class="workspace" aria-label="Task workspace">
+                    <div class="workspace-header">
+                        <div>
+                            <h1 id="viewTitle">All tasks</h1>
+                            <p id="viewSubtitle">Plan the work, protect the week, finish the right things.</p>
+                        </div>
+                        <div id="workspaceToolbar" class="workspace-toolbar" aria-label="Workspace actions"></div>
+                        <div class="tabs" id="viewTabs" role="tablist" aria-label="Views">
+                            <button class="tab active" type="button" data-view="unified" role="tab" title="Workspace" aria-label="Workspace">
+                                <i data-lucide="layout-dashboard"></i>
+                                Workspace
+                            </button>
+                            <button class="tab" type="button" data-view="board" role="tab" title="Board" aria-label="Board">
+                                <i data-lucide="kanban"></i>
+                                Board
+                            </button>
+                            <button class="tab" type="button" data-view="list" role="tab" title="List" aria-label="List">
+                                <i data-lucide="list-checks"></i>
+                                List
+                            </button>
+                            <button class="tab" type="button" data-view="calendar" role="tab" title="Calendar" aria-label="Calendar">
+                                <i data-lucide="calendar-days"></i>
+                                Calendar
+                            </button>
+                            <button class="tab" type="button" data-view="meetings" role="tab" title="Events" aria-label="Events">
+                                <i data-lucide="presentation"></i>
+                                Events
+                            </button>
+                            <button class="tab" type="button" data-view="analytics" role="tab" title="Analytics" aria-label="Analytics">
+                                <i data-lucide="bar-chart-3"></i>
+                                Analytics
+                            </button>
+                            <button class="tab" type="button" data-view="focus" role="tab" title="Focus" aria-label="Focus">
+                                <i data-lucide="timer"></i>
+                                Focus
+                            </button>
+                        </div>
+                    </div>
+                    <div id="nudgePanel" class="nudge-panel"></div>
+                    <div id="boardView" class="view active"></div>
+                    <div id="listView" class="view"></div>
+                    <div id="calendarView" class="view"></div>
+                    <div id="unifiedView" class="view"></div>
+                    <div id="meetingsView" class="view"></div>
+                    <div id="analyticsView" class="view"></div>
+                    <div id="focusView" class="view"></div>
+                </section>
+            </main>
+        </div>
+        <nav class="mobile-page-nav" id="mobilePageNav" aria-label="Mobile workspace pages">
+            <button class="active" type="button" data-mobile-page="home" aria-pressed="true">
+                <i data-lucide="layout-dashboard"></i>
+                <span>Home</span>
+            </button>
+            <button type="button" data-mobile-page="tasks" aria-pressed="false">
+                <i data-lucide="list-checks"></i>
+                <span>Tasks</span>
+            </button>
+            <button type="button" data-mobile-page="activity" aria-pressed="false">
+                <i data-lucide="triangle"></i>
+                <span>Activity</span>
+            </button>
+        </nav>
+        <dialog id="taskDialog" class="task-dialog">
+            <form id="taskForm" method="dialog">
+                <input id="taskId" type="hidden">
+                <div class="dialog-header">
+                    <div>
+                        <p class="eyebrow">Task details</p>
+                        <h2 id="dialogTitle">New task</h2>
+                    </div>
+                    <button class="icon-button" id="closeDialogBtn" type="button" aria-label="Close task dialog" title="Close">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <label class="form-row full">
+                    <span>Title</span>
+                    <input id="titleInput" required maxlength="120">
+                </label>
+                <div class="form-grid">
+                    <label class="form-row">
+                        <span>Project</span>
+                        <input id="projectInput" list="projectSuggestions" maxlength="32">
+                        <datalist id="projectSuggestions"></datalist>
+                    </label>
+                    <label class="form-row">
+                        <span>Status</span>
+                        <select id="statusInput"></select>
+                    </label>
+                    <label class="form-row">
+                        <span>Priority</span>
+                        <select id="priorityInput">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                    </label>
+                    <label class="form-row">
+                        <span>Due date</span>
+                        <input id="dueInput" type="date">
+                    </label>
+                    <label class="form-row">
+                        <span>Due time</span>
+                        <input id="dueTimeInput" type="time">
+                    </label>
+                    <label class="form-row">
+                        <span>Plan date</span>
+                        <input id="plannedDateInput" type="date">
+                    </label>
+                    <label class="form-row">
+                        <span>Plan start</span>
+                        <input id="plannedStartInput" type="time">
+                    </label>
+                    <label class="form-row">
+                        <span>Plan end</span>
+                        <input id="plannedEndInput" type="time">
+                    </label>
+                    <label class="form-row">
+                        <span>Estimate</span>
+                        <input id="estimateInput" type="number" min="0" step="5">
+                    </label>
+                    <label class="form-row">
+                        <span>Energy</span>
+                        <select id="energyInput">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </label>
+                    <label class="form-row">
+                        <span>Recurrence</span>
+                        <select id="recurrenceInput">
+                            <option value="none">None</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </label>
+                    <label class="form-row">
+                        <span>Tags</span>
+                        <input id="tagsInput" placeholder="design, launch">
+                    </label>
+                </div>
+                <label class="form-row full">
+                    <span>Notes</span>
+                    <textarea id="notesInput" rows="4" maxlength="800"></textarea>
+                </label>
+                <div class="subtask-editor">
+                    <div class="subtask-head">
+                        <span>Subtasks</span>
+                        <button class="button ghost" id="addSubtaskBtn" type="button">
+                            <i data-lucide="list-plus"></i>
+                            Add step
+                        </button>
+                    </div>
+                    <div id="subtaskList" class="subtask-list"></div>
+                </div>
+                <div class="dialog-actions">
+                    <button class="button danger" id="deleteTaskBtn" type="button">
+                        <i data-lucide="trash-2"></i>
+                        Delete
+                    </button>
+                    <span></span>
+                    <button class="button ghost" id="duplicateTaskBtn" type="button">
+                        <i data-lucide="copy"></i>
+                        Duplicate
+                    </button>
+                    <button class="button primary" id="saveTaskBtn" type="submit">
+                        <i data-lucide="save"></i>
+                        Save task
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <dialog id="meetingDialog" class="task-dialog">
+            <form id="meetingForm" method="dialog">
+                <input id="meetingId" type="hidden">
+                <div class="dialog-header">
+                    <div>
+                        <p class="eyebrow">Event details</p>
+                        <h2 id="meetingDialogTitle">New event</h2>
+                    </div>
+                    <button class="icon-button" id="closeMeetingDialogBtn" type="button" aria-label="Close event dialog" title="Close">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <label class="form-row full">
+                    <span>Title</span>
+                    <input id="meetingTitleInput" required maxlength="120">
+                </label>
+                <div class="form-grid">
+                    <label class="form-row">
+                        <span>Category</span>
+                        <input id="meetingSubjectInput" maxlength="48" placeholder="Work">
+                    </label>
+                    <label class="form-row">
+                        <span>Status</span>
+                        <select id="meetingStatusInput">
+                            <option value="scheduled">Scheduled</option>
+                            <option value="done">Done</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </label>
+                    <label class="form-row">
+                        <span>Date</span>
+                        <input id="meetingDateInput" type="date" required>
+                    </label>
+                    <label class="form-row">
+                        <span>Start time</span>
+                        <input id="meetingStartInput" type="time" required>
+                    </label>
+                    <label class="form-row">
+                        <span>End time</span>
+                        <input id="meetingEndInput" type="time">
+                    </label>
+                    <label class="form-row">
+                        <span>Repeat</span>
+                        <select id="meetingRecurrenceInput">
+                            <option value="none">None</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="fortnightly">Fortnightly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </label>
+                    <label class="form-row">
+                        <span>Repeat until</span>
+                        <input id="meetingRepeatUntilInput" type="date">
+                    </label>
+                    <label class="form-row">
+                        <span>Host</span>
+                        <input id="meetingTeacherInput" maxlength="64">
+                    </label>
+                    <label class="form-row">
+                        <span>Room or link</span>
+                        <input id="meetingLocationInput" maxlength="120">
+                    </label>
+                    <label class="form-row">
+                        <span>Topic</span>
+                        <input id="meetingTopicInput" maxlength="120">
+                    </label>
+                </div>
+                <label class="form-row full">
+                    <span>Small notes</span>
+                    <textarea id="meetingNotesInput" rows="3" maxlength="500" placeholder="Anything useful from this event..."></textarea>
+                </label>
+                <div class="dialog-actions">
+                    <button class="button ghost" id="meetingCreateTaskBtn" type="button">
+                        <i data-lucide="list-plus"></i>
+                        Create follow-up task
+                    </button>
+                    <button class="button ghost danger" id="deleteMeetingBtn" type="button">
+                        <i data-lucide="trash-2"></i>
+                        Delete
+                    </button>
+                    <button class="button primary" type="submit">
+                        <i data-lucide="save"></i>
+                        Save event
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <dialog id="deleteMeetingsDialog" class="confirm-dialog">
+            <form id="deleteMeetingsForm" method="dialog">
+                <h2>Delete events</h2>
+                <p>Choose which events to remove. This will sync to your account after confirmation.</p>
+                <label class="form-row full">
+                    <span>Delete range</span>
+                    <select id="deleteMeetingsScope">
+                        <option value="today">Today</option>
+                        <option value="tomorrow">Tomorrow</option>
+                        <option value="week">This week</option>
+                        <option value="month">This month</option>
+                        <option value="year">This year</option>
+                        <option value="all">All events</option>
+                    </select>
+                </label>
+                <div class="confirm-actions">
+                    <button class="button ghost" id="cancelDeleteMeetingsBtn" type="button">Cancel</button>
+                    <button class="button ghost danger" type="submit">
+                        <i data-lucide="trash-2"></i>
+                        Continue
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <dialog id="accountSettingsDialog" class="task-dialog settings-dialog">
+            <form id="accountSettingsForm" method="dialog">
+                <div class="dialog-header">
+                    <div>
+                        <p class="eyebrow">Account</p>
+                        <h2>Settings</h2>
+                    </div>
+                    <button class="icon-button" id="closeSettingsDialogBtn" type="button" aria-label="Close settings" title="Close">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="settings-section-tabs" id="settingsSectionTabs" role="tablist" aria-label="Settings sections">
+                    <button class="active" type="button" role="tab" aria-selected="true" data-settings-section-target="account">
+                        <i data-lucide="user-circle"></i>
+                        Account
+                    </button>
+                    <button type="button" role="tab" aria-selected="false" data-settings-section-target="sync">
+                        <i data-lucide="cloud-check"></i>
+                        Sync
+                    </button>
+                    <button type="button" role="tab" aria-selected="false" data-settings-section-target="plan">
+                        <i data-lucide="shield-check"></i>
+                        Plan
+                    </button>
+                    <button type="button" role="tab" aria-selected="false" data-settings-section-target="data">
+                        <i data-lucide="database"></i>
+                        Data
+                    </button>
+                    <button type="button" role="tab" aria-selected="false" data-settings-section-target="support">
+                        <i data-lucide="life-buoy"></i>
+                        Support
+                    </button>
+                </div>
+                <section class="settings-panel" data-settings-section="account">
+                    <div class="settings-account">
+                        <i data-lucide="user-circle"></i>
+                        <div>
+                            <span>Signed in as</span>
+                            <strong id="settingsEmail">Account</strong>
+                        </div>
+                    </div>
+                    <div class="form-grid">
+                        <label class="form-row">
+                            <span>Event time zone</span>
+                            <select id="settingsTimezoneInput"></select>
+                        </label>
+                        <label class="form-row">
+                            <span>Layout density</span>
+                            <select id="settingsDensityInput">
+                                <option value="comfortable">Comfortable</option>
+                                <option value="compact">Compact</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="settings-actions">
+                        <button class="button primary" id="settingsCustomizeUiBtn" type="button">
+                            <i data-lucide="sparkles"></i>
+                            Customize UI
+                        </button>
+                        <button class="button ghost" id="settingsDensityToggleBtn" type="button">
+                            <i data-lucide="rows-3"></i>
+                            Compact
+                        </button>
+                        <button class="button ghost" id="settingsTutorialBtn" type="button">
+                            <i data-lucide="graduation-cap"></i>
+                            Tutorial
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel" data-settings-section="account">
+                    <h3>Reminders</h3>
+                    <p>Browser notifications can remind you about planned work, due times, and events while TaskFlow is open or installed on this device.</p>
+                    <div class="form-grid">
+                        <label class="form-row checkbox-row">
+                            <span>Notifications</span>
+                            <span class="toggle-line">
+                                <input id="settingsNotificationsInput" type="checkbox">
+                                <span>Enable on this device</span>
+                            </span>
+                        </label>
+                        <label class="form-row">
+                            <span>Remind me</span>
+                            <select id="settingsNotificationLeadInput">
+                                <option value="0">At the time</option>
+                                <option value="5">5 minutes before</option>
+                                <option value="10">10 minutes before</option>
+                                <option value="15">15 minutes before</option>
+                                <option value="30">30 minutes before</option>
+                                <option value="60">1 hour before</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="settings-actions">
+                        <button class="button ghost" id="settingsTestNotificationBtn" type="button">
+                            <i data-lucide="bell-ring"></i>
+                            Send test
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel privacy-panel" data-settings-section="sync">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Private sync</h3>
+                            <p id="settingsEncryptionSummary">Optional passphrase encryption for task, event, and note content before cloud sync.</p>
+                        </div>
+                        <span class="sync-health-badge" id="settingsEncryptionBadge">Off</span>
+                    </div>
+                    <div class="form-grid">
+                        <label class="form-row">
+                            <span>Encryption passphrase</span>
+                            <input id="settingsEncryptionPassphraseInput" type="password" autocomplete="off" placeholder="Required to enable or unlock">
+                        </label>
+                    </div>
+                    <p class="sync-health-note" id="settingsEncryptionAdvice">If you forget this passphrase, encrypted cloud data cannot be recovered.</p>
+                    <div class="settings-actions">
+                        <button class="button ghost" id="settingsEnableEncryptionBtn" type="button">
+                            <i data-lucide="lock-keyhole"></i>
+                            Enable / unlock
+                        </button>
+                        <button class="button ghost" id="settingsLockEncryptionBtn" type="button">
+                            <i data-lucide="lock"></i>
+                            Lock
+                        </button>
+                        <button class="button ghost danger" id="settingsDisableEncryptionBtn" type="button">
+                            <i data-lucide="lock-open"></i>
+                            Turn off private sync
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel sync-health-panel" data-settings-section="sync">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Sync & backup</h3>
+                            <p id="settingsSyncSummary">Checking your saved workspace...</p>
+                        </div>
+                        <span class="sync-health-badge" id="settingsSyncBadge">Checking</span>
+                    </div>
+                    <div class="sync-health-grid" id="settingsSyncDetails"></div>
+                    <p class="sync-health-note" id="settingsSyncAdvice"></p>
+                    <div class="settings-actions">
+                        <button class="button ghost" id="settingsSyncNowBtn" type="button">
+                            <i data-lucide="refresh-cw"></i>
+                            Sync now
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel sync-health-panel" data-settings-section="sync">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Sync activity</h3>
+                            <p id="settingsActivitySummary">Recent save and sync events appear here.</p>
+                        </div>
+                        <span class="sync-health-badge" id="settingsActivityBadge">Checking</span>
+                    </div>
+                    <div class="sync-activity-list" id="settingsActivityList"></div>
+                    <p class="sync-health-note">This history stays on this device and can be exported for TaskFlow support.</p>
+                    <div class="settings-actions">
+                        <button class="button ghost" id="settingsActivityExportBtn" type="button">
+                            <i data-lucide="download"></i>
+                            Export log
+                        </button>
+                        <button class="button ghost danger" id="settingsActivityClearBtn" type="button">
+                            <i data-lucide="trash-2"></i>
+                            Clear log
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel sync-health-panel" data-settings-section="sync">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Google Calendar</h3>
+                            <p id="settingsGoogleCalendarSummary">Sync TaskFlow tasks and events with Google Calendar.</p>
+                        </div>
+                        <span class="sync-health-badge" id="settingsGoogleCalendarBadge">Checking</span>
+                    </div>
+                    <p class="sync-health-note" id="settingsGoogleCalendarAdvice">TaskFlow-owned items overwrite matching Google Calendar items. Other Google events can be imported into TaskFlow.</p>
+                    <div class="sync-health-grid google-calendar-details" id="settingsGoogleCalendarDetails"></div>
+                    <div class="settings-actions">
+                        <label class="toggle-line settings-inline-toggle">
+                            <input id="settingsGoogleCalendarAutoInput" type="checkbox">
+                            <span>Auto-sync often</span>
+                        </label>
+                        <button class="button ghost" id="settingsGoogleCalendarSyncBtn" type="button">
+                            <i data-lucide="calendar-check"></i>
+                            One-time Google sync
+                        </button>
+                        <button class="button ghost" id="settingsGoogleCalendarRepairBtn" type="button">
+                            <i data-lucide="refresh-ccw"></i>
+                            Repair sync
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel sync-health-panel diagnostics-panel" data-settings-section="sync">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Diagnostics</h3>
+                            <p id="settingsDiagnosticsSummary">A quick health check for your workspace and connections.</p>
+                        </div>
+                        <span class="sync-health-badge" id="settingsDiagnosticsBadge">Checking</span>
+                    </div>
+                    <div class="sync-health-grid diagnostics-grid" id="settingsDiagnosticsGrid"></div>
+                    <p class="sync-health-note" id="settingsDiagnosticsAdvice">Diagnostics stay on this device unless you choose to send feedback.</p>
+                    <div class="settings-actions">
+                        <button class="button ghost" id="settingsDiagnosticsCopyBtn" type="button">
+                            <i data-lucide="copy"></i>
+                            Copy report details
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel plan-panel" data-settings-section="plan">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Plan & fair use</h3>
+                            <p id="settingsPlanSummary">Base includes practical fair-use room for normal personal planning.</p>
+                        </div>
+                        <span class="sync-health-badge" id="settingsTierBadge">Base</span>
+                    </div>
+                    <div class="tier-usage-card">
+                        <div>
+                            <span>AI Assist today</span>
+                            <strong id="settingsUsageSummary">0 / 100</strong>
+                        </div>
+                        <div class="usage-meter" aria-hidden="true">
+                            <span id="settingsUsageMeter"></span>
+                        </div>
+                    </div>
+                    <div class="tier-usage-card">
+                        <div>
+                            <span>Workspace</span>
+                            <strong id="settingsWorkspaceSummary">Calculating...</strong>
+                        </div>
+                        <div class="usage-meter storage-meter" aria-hidden="true">
+                            <span id="settingsWorkspaceMeter"></span>
+                        </div>
+                    </div>
+                    <p class="sync-health-note" id="settingsTierRequestStatus">Higher tiers can be requested if your normal use needs more room.</p>
+                    <div class="settings-actions">
+                        <button class="button ghost" id="settingsTierRequestBtn" type="button">
+                            <i data-lucide="arrow-up-circle"></i>
+                            Request higher tier
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel" data-settings-section="data">
+                    <h3>Data</h3>
+                    <p>Your tasks, events, and notes sync to your account. You can back them up or clear this workspace.</p>
+                    <div class="data-safety-card">
+                        <div>
+                            <i data-lucide="shield-check"></i>
+                            <strong>Recommended before big changes</strong>
+                        </div>
+                        <p>Export a backup before clearing browser data, switching devices, or testing major sync changes. Restore points stay on this device; exported backups are the portable safety copy.</p>
+                    </div>
+                    <div class="form-grid">
+                        <label class="form-row">
+                            <span>Auto-delete completed tasks</span>
+                            <select id="settingsAutoDeleteDoneInput">
+                                <option value="0">Never</option>
+                                <option value="1">After 1 day</option>
+                                <option value="7">After 7 days</option>
+                                <option value="14">After 14 days</option>
+                                <option value="30">After 30 days</option>
+                                <option value="90">After 90 days</option>
+                                <option value="180">After 6 months</option>
+                                <option value="365">After 1 year</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="settings-actions">
+                        <button class="button ghost" id="settingsExportBtn" type="button">
+                            <i data-lucide="download"></i>
+                            Export backup
+                        </button>
+                        <button class="button ghost" id="settingsImportBtn" type="button">
+                            <i data-lucide="upload"></i>
+                            Import backup
+                        </button>
+                        <button class="button ghost danger" id="settingsDeleteDoneBtn" type="button">
+                            <i data-lucide="trash-2"></i>
+                            Delete done tasks
+                        </button>
+                        <button class="button ghost danger" id="settingsDeleteDataBtn" type="button">
+                            <i data-lucide="trash-2"></i>
+                            Delete workspace data
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel sync-health-panel" data-settings-section="data">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Restore points</h3>
+                            <p id="settingsRestoreSummary">TaskFlow keeps recent local restore points on this device.</p>
+                        </div>
+                        <span class="sync-health-badge" id="settingsRestoreBadge">Checking</span>
+                    </div>
+                    <label class="form-row">
+                        <span>Saved point</span>
+                        <select id="settingsRestorePointInput"></select>
+                    </label>
+                    <p class="sync-health-note">Restore points are device-only safety copies. Export one before clearing browser data.</p>
+                    <div class="settings-actions">
+                        <button class="button ghost" id="settingsCreateRestorePointBtn" type="button">
+                            <i data-lucide="shield-plus"></i>
+                            Create restore point
+                        </button>
+                        <button class="button ghost" id="settingsRestorePointBtn" type="button">
+                            <i data-lucide="rotate-ccw"></i>
+                            Restore selected
+                        </button>
+                        <button class="button ghost" id="settingsExportRestorePointBtn" type="button">
+                            <i data-lucide="download"></i>
+                            Export selected
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel support-panel" data-settings-section="support">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Help & feedback</h3>
+                            <p>Send a bug report, feature request, or sync issue to TaskFlow with safe app details attached.</p>
+                        </div>
+                        <span class="sync-health-badge" data-health="good">Beta</span>
+                    </div>
+                    <div class="settings-actions">
+                        <button class="button primary" id="settingsFeedbackBtn" type="button">
+                            <i data-lucide="message-square-plus"></i>
+                            Send feedback or get help
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel beta-release-panel" data-settings-section="support">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Beta 0.95</h3>
+                            <p>TaskFlow is focused on stronger AI Assist bulk actions, clearer Private sync recovery controls, optional sidebar behavior, and safer sync across devices.</p>
+                        </div>
+                        <span class="sync-health-badge" data-health="good">Current</span>
+                    </div>
+                    <div class="release-note-grid">
+                        <span>
+                            <i data-lucide="wand-sparkles"></i>
+                            AI Assist can create, edit, schedule, complete, duplicate, and sync.
+                        </span>
+                        <span>
+                            <i data-lucide="calendar-sync"></i>
+                            Google Calendar can reuse backend sync state across devices.
+                        </span>
+                        <span>
+                            <i data-lucide="shield-check"></i>
+                            Privacy, backups, and account controls are easier to find.
+                        </span>
+                    </div>
+                </section>
+                <section class="settings-panel account-deletion-panel" data-settings-section="support">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Account deletion</h3>
+                            <p>Request full account deletion for review. Workspace data can still be cleared immediately above.</p>
+                        </div>
+                        <span class="sync-health-badge" id="settingsDeletionStatus">Available</span>
+                    </div>
+                    <p class="sync-health-note">For safety, account deletion is reviewed by TaskFlow before the sign-in account is permanently removed.</p>
+                    <div class="settings-actions">
+                        <button class="button ghost danger" id="settingsDeletionRequestBtn" type="button">
+                            <i data-lucide="user-x"></i>
+                            Request account deletion
+                        </button>
+                    </div>
+                </section>
+                <section class="settings-panel subtle" data-settings-section="support">
+                    <h3>Legal</h3>
+                    <p>Review TaskFlow's terms, proprietary license, fair use policy, and privacy policy any time.</p>
+                    <div class="settings-actions">
+                        <button class="button ghost" id="settingsLicenseBtn" type="button">
+                            <i data-lucide="file-text"></i>
+                            View license
+                        </button>
+                        <button class="button ghost" id="settingsPrivacyBtn" type="button">
+                            <i data-lucide="shield-check"></i>
+                            Privacy policy
+                        </button>
+                    </div>
+                </section>
+                <p class="settings-version" id="settingsAppVersion">Version: beta 0.95</p>
+                <div class="dialog-actions">
+                    <button class="button ghost" id="settingsSignOutBtn" type="button">
+                        <i data-lucide="log-out"></i>
+                        Sign out
+                    </button>
+                    <span class="settings-autosave-note">Settings autosave</span>
+                </div>
+            </form>
+        </dialog>
+        <dialog id="appearanceDialog" class="task-dialog appearance-dialog">
+            <form id="appearanceForm" method="dialog">
+                <div class="dialog-header">
+                    <div>
+                        <p class="eyebrow">Visual identity</p>
+                        <h2>Customize UI</h2>
+                    </div>
+                    <button class="icon-button" id="closeAppearanceDialogBtn" type="button" aria-label="Close appearance settings" title="Close">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <section class="appearance-hero">
+                    <div>
+                        <p class="eyebrow">Appearance</p>
+                        <h3 id="appearancePresetTitle">OG TaskFlow</h3>
+                        <p id="appearancePresetDescription">The clean original TaskFlow feel: light, sharp, practical, and calm.</p>
+                    </div>
+                    <div class="appearance-preview" aria-hidden="true">
+                        <span></span>
+                        <strong>Today</strong>
+                        <em></em>
+                        <small></small>
+                    </div>
+                </section>
+                <section class="appearance-presets" id="appearancePresetGrid" aria-label="UI presets"></section>
+                <section class="settings-panel">
+                    <div class="settings-section-head">
+                        <div>
+                            <h3>Fine tune</h3>
+                            <p>Choose a preset first, then adjust the details only if you want something more personal.</p>
+                        </div>
+                        <span class="sync-health-badge" id="appearanceModeBadge">Preset</span>
+                    </div>
+                    <div class="form-grid">
+                        <label class="form-row">
+                            <span>Theme</span>
+                            <select id="appearanceThemeInput">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </label>
+                        <label class="form-row">
+                            <span>Wallpaper</span>
+                            <select id="appearanceWallpaperInput">
+                                <option value="none">None</option>
+                                <option value="aurora">Aurora</option>
+                                <option value="mesh">Colour mesh</option>
+                                <option value="grid">Focus grid</option>
+                                <option value="halo">Sunrise halo</option>
+                                <option value="custom">Uploaded image</option>
+                            </select>
+                        </label>
+                        <label class="form-row">
+                            <span>Wallpaper image</span>
+                            <div class="wallpaper-upload-row">
+                                <input id="appearanceWallpaperUploadInput" type="file" accept="image/*" hidden>
+                                <button class="button ghost" id="appearanceWallpaperUploadBtn" type="button">
+                                    <i data-lucide="image-up"></i>
+                                    Upload
+                                </button>
+                                <button class="button ghost" id="appearanceWallpaperClearBtn" type="button">
+                                    <i data-lucide="eraser"></i>
+                                    Clear
+                                </button>
+                            </div>
+                            <small class="wallpaper-sync-status" id="appearanceWallpaperStatus">No uploaded wallpaper synced.</small>
+                        </label>
+                        <label class="form-row">
+                            <span>Surface style</span>
+                            <select id="appearanceGlassInput">
+                                <option value="off">Normal</option>
+                                <option value="soft">Frosted</option>
+                            </select>
+                        </label>
+                        <label class="form-row">
+                            <span>Motion</span>
+                            <select id="appearanceMotionInput">
+                                <option value="calm">Calm</option>
+                                <option value="standard">Standard</option>
+                                <option value="kinetic">Kinetic</option>
+                            </select>
+                        </label>
+                        <label class="form-row">
+                            <span>Accent</span>
+                            <div class="accent-picker" id="appearanceAccentPicker"></div>
+                        </label>
+                    </div>
+                </section>
+                <section class="appearance-lab-grid">
+                    <div class="settings-panel appearance-panel">
+                        <div class="settings-section-head">
+                            <div>
+                                <h3>Frosted</h3>
+                                <p>Choose Normal or Frosted, then adjust how strong the frost feels.</p>
+                            </div>
+                            <span class="sync-health-badge">Live</span>
+                        </div>
+                        <div class="appearance-slider-grid">
+                            <label class="range-row">
+                                <span>
+                                    Frosted amount <b data-appearance-value="appearanceGlassOpacityInput">96%</b>
+                                </span>
+                                <input id="appearanceGlassOpacityInput" type="range" min="38" max="100" step="1">
+                            </label>
+                            <label class="range-row">
+                                <span>
+                                    Frost blur <b data-appearance-value="appearanceGlassBlurInput">12px</b>
+                                </span>
+                                <input id="appearanceGlassBlurInput" type="range" min="0" max="42" step="1">
+                            </label>
+                            <label class="range-row advanced-glass-row">
+                                <span>
+                                    Saturation <b data-appearance-value="appearanceGlassSaturationInput">122%</b>
+                                </span>
+                                <input id="appearanceGlassSaturationInput" type="range" min="80" max="210" step="1">
+                            </label>
+                            <label class="range-row advanced-glass-row">
+                                <span>
+                                    Contrast <b data-appearance-value="appearanceGlassContrastInput">100%</b>
+                                </span>
+                                <input id="appearanceGlassContrastInput" type="range" min="82" max="135" step="1">
+                            </label>
+                            <label class="range-row advanced-glass-row">
+                                <span>
+                                    Edge shine <b data-appearance-value="appearanceBorderShineInput">34%</b>
+                                </span>
+                                <input id="appearanceBorderShineInput" type="range" min="0" max="100" step="1">
+                            </label>
+                            <label class="range-row">
+                                <span>
+                                    Shadow depth <b data-appearance-value="appearanceShadowStrengthInput">8%</b>
+                                </span>
+                                <input id="appearanceShadowStrengthInput" type="range" min="0" max="34" step="1">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="settings-panel appearance-panel">
+                        <div class="settings-section-head">
+                            <div>
+                                <h3>Shape & layers</h3>
+                                <p>Control how soft, transparent, and spacious the app feels.</p>
+                            </div>
+                        </div>
+                        <div class="appearance-slider-grid">
+                            <label class="range-row">
+                                <span>
+                                    Corner radius <b data-appearance-value="appearanceCornerRadiusInput">8px</b>
+                                </span>
+                                <input id="appearanceCornerRadiusInput" type="range" min="0" max="28" step="1">
+                            </label>
+                            <label class="range-row">
+                                <span>
+                                    Buttons <b data-appearance-value="appearanceButtonOpacityInput">100%</b>
+                                </span>
+                                <input id="appearanceButtonOpacityInput" type="range" min="48" max="100" step="1">
+                            </label>
+                            <label class="range-row">
+                                <span>
+                                    Unified windows <b data-appearance-value="appearanceWindowOpacityInput">96%</b>
+                                </span>
+                                <input id="appearanceWindowOpacityInput" type="range" min="40" max="100" step="1">
+                            </label>
+                            <label class="range-row">
+                                <span>
+                                    Sidebar/topbar <b data-appearance-value="appearanceSidebarOpacityInput">96%</b>
+                                </span>
+                                <input id="appearanceSidebarOpacityInput" type="range" min="42" max="100" step="1">
+                            </label>
+                            <label class="range-row">
+                                <span>
+                                    Wallpaper strength <b data-appearance-value="appearanceWallpaperIntensityInput">0%</b>
+                                </span>
+                                <input id="appearanceWallpaperIntensityInput" type="range" min="0" max="100" step="1">
+                            </label>
+                            <label class="range-row">
+                                <span>
+                                    Text scale <b data-appearance-value="appearanceTextScaleInput">100%</b>
+                                </span>
+                                <input id="appearanceTextScaleInput" type="range" min="92" max="112" step="1">
+                            </label>
+                            <label class="range-row">
+                                <span>
+                                    Motion energy <b data-appearance-value="appearanceMotionEnergyInput">100%</b>
+                                </span>
+                                <input id="appearanceMotionEnergyInput" type="range" min="40" max="150" step="1">
+                            </label>
+                            <label class="toggle-line appearance-toggle">
+                                <input id="appearanceCompactSurfacesInput" type="checkbox">
+                                <span>Tighter surfaces</span>
+                            </label>
+                            <label class="toggle-line appearance-toggle">
+                                <input id="appearanceSidebarAutoHideInput" type="checkbox">
+                                <span>Hide sidebar until hover</span>
+                            </label>
+                            <label class="form-row appearance-layout-row">
+                                <span>Sidebar layout</span>
+                                <select id="appearanceSidebarModeInput">
+                                    <option value="attached">Attached</option>
+                                    <option value="detached">Detached</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                <div class="dialog-actions">
+                    <button class="button ghost" id="appearanceSavePresetBtn" type="button">
+                        <i data-lucide="bookmark-plus"></i>
+                        Save preset
+                    </button>
+                    <button class="button ghost" id="appearanceResetBtn" type="button">
+                        <i data-lucide="rotate-ccw"></i>
+                        Reset default
+                    </button>
+                    <span class="settings-autosave-note">Appearance autosaves</span>
+                    <button class="button primary" id="appearanceDoneBtn" type="button">
+                        <i data-lucide="check"></i>
+                        Done
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <dialog id="welcomeDialog" class="welcome-dialog">
+            <div class="welcome-card">
+                <button class="icon-button" id="skipWelcomeBtn" type="button" aria-label="Skip welcome" title="Close">
+                    <i data-lucide="x"></i>
+                </button>
+                <div class="welcome-mark brand-mark" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="eyebrow" id="welcomeEyebrow">Welcome</p>
+                <h2 id="welcomeTitle">Welcome to TaskFlow</h2>
+                <p id="welcomeBody">Start with AI Assist, then organise tasks on the board, events on the calendar, and anything loose in General notes.</p>
+                <div class="welcome-tip" id="welcomeTip"></div>
+                <div class="welcome-steps" id="welcomeSteps" aria-label="Tutorial progress"></div>
+                <div class="welcome-actions">
+                    <button class="button ghost" id="welcomeBackBtn" type="button">Back</button>
+                    <button class="button primary" id="welcomeNextBtn" type="button">
+                        Next <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="aiAssistHelpDialog" class="ai-assist-dialog">
+            <div class="dialog-header">
+                <div>
+                    <p class="eyebrow">AI Assist</p>
+                    <h2>What can AI Assist do?</h2>
+                </div>
+                <button class="icon-button" id="closeAiAssistHelpBtn" type="button" aria-label="Close AI Assist help">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="assist-help-grid">
+                <article>
+                    <i data-lucide="plus-circle"></i>
+                    <strong>Create</strong>
+                    <span>Add tasks or events from messy sentences.</span>
+                    <code>add commerce homework due tonight 9pm</code>
+                </article>
+                <article>
+                    <i data-lucide="calendar-clock"></i>
+                    <strong>Plan</strong>
+                    <span>Set when you will work, separate from when it is due.</span>
+                    <code>plan English essay tomorrow from 6pm to 7pm</code>
+                </article>
+                <article>
+                    <i data-lucide="list-plus"></i>
+                    <strong>Break down</strong>
+                    <span>Add steps, notes, tags, project, estimate, or priority.</span>
+                    <code>add steps to maths revision: chapter 4, practice test</code>
+                </article>
+                <article>
+                    <i data-lucide="check-circle-2"></i>
+                    <strong>Update</strong>
+                    <span>Complete, reopen, move, duplicate, or delete matching tasks.</span>
+                    <code>finished commerce homework</code>
+                </article>
+                <article>
+                    <i data-lucide="calendar-plus"></i>
+                    <strong>Events</strong>
+                    <span>Create event follow-up tasks or update event status.</span>
+                    <code>create a follow-up task from commerce class</code>
+                </article>
+                <article>
+                    <i data-lucide="refresh-cw"></i>
+                    <strong>Sync</strong>
+                    <span>Start account sync or repair Google Calendar sync.</span>
+                    <code>repair Google sync</code>
+                </article>
+            </div>
+        </dialog>
+        <dialog id="usageLimitDialog" class="confirm-dialog usage-limit-dialog">
+            <div>
+                <div class="limit-icon">
+                    <i data-lucide="shield-alert"></i>
+                </div>
+                <h2 id="usageLimitTitle">AI Assist limit reached</h2>
+                <p id="usageLimitMessage">TaskFlow can still add the task without AI.</p>
+                <p class="sync-health-note" id="usageLimitMeta"></p>
+                <div class="confirm-actions">
+                    <button class="button ghost" id="usageLimitCloseBtn" type="button">Continue</button>
+                    <button class="button primary" id="usageLimitRequestBtn" type="button">
+                        <i data-lucide="arrow-up-circle"></i>
+                        Request more
+                    </button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="tierRequestDialog" class="confirm-dialog tier-request-dialog">
+            <form id="tierRequestForm">
+                <h2>Request higher tier</h2>
+                <p>Tell TaskFlow why your normal use needs more room. Your request is sent to TaskFlow for review.</p>
+                <div class="form-grid two-col">
+                    <label class="form-row">
+                        <span>First name</span>
+                        <input id="tierRequestFirstNameInput" maxlength="80" autocomplete="given-name">
+                    </label>
+                    <label class="form-row">
+                        <span>Last name</span>
+                        <input id="tierRequestLastNameInput" maxlength="80" autocomplete="family-name">
+                    </label>
+                </div>
+                <label class="form-row">
+                    <span>Requested tier</span>
+                    <select id="tierRequestTierInput">
+                        <option value="pro">Pro - 500 AI Assist requests per day</option>
+                        <option value="dev">Custom access review</option>
+                    </select>
+                </label>
+                <label class="form-row">
+                    <span>Reason optional</span>
+                    <textarea id="tierRequestReasonInput" rows="4" maxlength="900" placeholder="How do you use TaskFlow, and why would a higher tier help?"></textarea>
+                </label>
+                <p class="sync-health-note" id="tierRequestMessage"></p>
+                <div class="confirm-actions">
+                    <button class="button ghost" id="tierRequestCancelBtn" type="button">Cancel</button>
+                    <button class="button primary" id="tierRequestSubmitBtn" type="submit">
+                        <i data-lucide="send"></i>
+                        Send request
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <dialog id="tierOutcomeDialog" class="confirm-dialog tier-outcome-dialog">
+            <div>
+                <div class="limit-icon">
+                    <i data-lucide="mail-check"></i>
+                </div>
+                <h2 id="tierOutcomeTitle">Tier request updated</h2>
+                <p id="tierOutcomeMessage"></p>
+                <p class="sync-health-note" id="tierOutcomeMeta"></p>
+                <div class="confirm-actions">
+                    <button class="button primary" id="tierOutcomeCloseBtn" type="button">Got it</button>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="feedbackDialog" class="confirm-dialog feedback-dialog">
+            <form id="feedbackForm">
+                <h2>Help & feedback</h2>
+                <p>Tell TaskFlow what happened or what would make the app better. Diagnostics never include task titles or note text unless you choose to include a summary.</p>
+                <label class="form-row">
+                    <span>Type</span>
+                    <select id="feedbackTypeInput">
+                        <option value="bug">Bug report</option>
+                        <option value="sync">Account or sync issue</option>
+                        <option value="feature">Feature request</option>
+                        <option value="feedback">General feedback</option>
+                        <option value="urgent">Urgent issue</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <label class="form-row">
+                    <span>Subject</span>
+                    <input id="feedbackSubjectInput" maxlength="120" placeholder="Short summary" required>
+                </label>
+                <label class="form-row">
+                    <span>Details</span>
+                    <textarea id="feedbackMessageInput" rows="5" maxlength="1800" placeholder="What happened? What were you trying to do?" required></textarea>
+                </label>
+                <label class="toggle-line">
+                    <input id="feedbackIncludeDiagnosticsInput" type="checkbox" checked="checked">
+                    <span>Include safe app details like version, browser, sync status, and item counts</span>
+                </label>
+                <label class="toggle-line">
+                    <input id="feedbackIncludeSummaryInput" type="checkbox">
+                    <span>Include a workspace summary with project/tag names, but no notes or task descriptions</span>
+                </label>
+                <p class="sync-health-note" id="feedbackMessage"></p>
+                <div class="confirm-actions">
+                    <button class="button ghost" id="feedbackCancelBtn" type="button">Cancel</button>
+                    <button class="button primary" id="feedbackSubmitBtn" type="submit">
+                        <i data-lucide="send"></i>
+                        Send to TaskFlow
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <dialog id="accountDeletionDialog" class="confirm-dialog account-deletion-dialog">
+            <form id="accountDeletionForm">
+                <h2>Request account deletion</h2>
+                <p>This sends a request to TaskFlow to permanently delete your sign-in account and associated account data. You can export a backup first from Settings.</p>
+                <label class="form-row">
+                    <span>Reason optional</span>
+                    <textarea id="accountDeletionReasonInput" rows="4" maxlength="900" placeholder="Anything you want TaskFlow to know before reviewing this request"></textarea>
+                </label>
+                <label class="form-row">
+                    <span>Type DELETE to confirm</span>
+                    <input id="accountDeletionConfirmInput" maxlength="12" autocomplete="off" placeholder="DELETE" required>
+                </label>
+                <p class="sync-health-note" id="accountDeletionMessage">Your workspace is not deleted immediately. TaskFlow reviews account deletion requests for safety.</p>
+                <div class="confirm-actions">
+                    <button class="button ghost" id="accountDeletionCancelBtn" type="button">Cancel</button>
+                    <button class="button danger" id="accountDeletionSubmitBtn" type="submit">
+                        <i data-lucide="send"></i>
+                        Send request
+                    </button>
+                </div>
+            </form>
+        </dialog>
+        <dialog id="confirmDialog" class="confirm-dialog">
+            <form method="dialog">
+                <h2 id="confirmTitle">Confirm action</h2>
+                <p id="confirmMessage"></p>
+                <div class="confirm-actions">
+                    <button class="button ghost" value="cancel">Cancel</button>
+                    <button class="button danger" id="confirmActionBtn" value="confirm">Confirm</button>
+                </div>
+            </form>
+        </dialog>
+        <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+        <script src="vendor/lucide.min.js"></script>
+        <script src="config.js?v=4297df3993"></script>
+        <script src="app.8de109e874.js" defer="defer"></script>
+    </body>
+</html>
