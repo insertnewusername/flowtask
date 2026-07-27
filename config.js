@@ -1,6 +1,6 @@
 window.TASKFLOW_SUPABASE = {
-  url: "https://timkbobrlxkwwmukkukv.supabase.co",
-  key: "sb_publishable_GMzXBw5vLt8cNdj3ytp_gA_ymdJe7PV",
+  url: "https://ryqyqvfprjozbyhasqtq.supabase.co",
+  key: "sb_publishable_F9D9-UzmRaaLgBhxoH1yiw_dYh7O4qt",
 };
 
 window.TASKFLOW_GOOGLE = {
