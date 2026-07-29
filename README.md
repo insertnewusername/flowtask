@@ -15,6 +15,8 @@ I also set it up for firebase, so had to do a few stuff.
 
 Also I tried using vite and stuff to encrypt the code before realising there wasn't too much of a point, which was why I have a few projects liked.
 
+Ai acklowledgement: My friend used ai to vibecode the website, but for me this project was mainly for me to learn how to scrape a website and config stuff such as firebase and supabase. I did ask copilot about whether setting up vite was a good idea, but then I ditched the idea anyways.
+
 Screenshots:
 
 <img width="1917" height="867" alt="Screenshot 2026-07-29 095858" src="https://github.com/user-attachments/assets/772f2375-d47c-463e-80f2-04462dfc02eb" />
