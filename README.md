@@ -1,4 +1,5 @@
 FLOWTASK
+Flowtask is a task management system for you to organise your tasks, see your calendar, and have notifications sent to you!
 
 FLow task is a project I made for scraping my friend (not anymore)'s website that he vibecoded "taskflow" but better
 
@@ -8,6 +9,8 @@ My friend banned me a few times, so I went into the code and set up my own supab
 
 Url of my friend's website: taskflow-northbyte.web.app
 Url of my better website: flowtask-southbyte.web.app
+
+If you go to my friends and try login, vs go to mine and login, you'll see that the login id is different for the two, thats because I changed it to go to my supabase one. Also, I did tinker with the javascript to make my ai credits unlimited.
 
 This project was definately legal btw.
 
