@@ -1,24 +1,18 @@
 FLOWTASK <br>
 Flowtask is a task management system for you to organise your tasks, see your calendar, and have notifications sent to you!
 
-FLow task is a project I made for scraping my friend (not anymore)'s website that he vibecoded "taskflow" but better
 
-In this project, I went to taskflow and learn't how to scrape websites, going to console, copying the code, as well as sending requests to get other things like favicons and icons.
 
-My friend banned me a few times, so I went into the code and set up my own supabase so that he couldn't ban me anymore
-
-Url of my friend's website: taskflow-northbyte.web.app
 Url of my better website: flowtask-southbyte.web.app
 
-If you go to my friends and try login, vs go to mine and login, you'll see that the login id is different for the two, thats because I changed it to go to my supabase one. Also, I did tinker with the javascript to make my ai credits unlimited.
+This project was mainly for me to learn how to do kinda a backend, with supabase login, and storage of stuff
 
-This project was definately legal btw.
+AI was used to help me initially setup for this project, though linking to supabase and firebase was done all by me
 
 I also set it up for firebase, so had to do a few stuff.
 
 Also I tried using vite and stuff to encrypt the code before realising there wasn't too much of a point, which was why I have a few projects liked.
 
-Ai acklowledgement: My friend used ai to vibecode the website, but for me this project was mainly for me to learn how to scrape a website and config stuff such as firebase and supabase. I did ask copilot about whether setting up vite was a good idea, but then I ditched the idea anyways.
 
 Screenshots:
 
@@ -26,4 +20,3 @@ Screenshots:
 <img width="1918" height="850" alt="Screenshot 2026-07-29 095923" src="https://github.com/user-attachments/assets/cff51224-cc19-4100-b96b-6257dbe84afe" />
 
 
-This is a project for #horizons
