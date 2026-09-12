@@ -1,5 +1,4 @@
-/*! TaskFlow proprietary software. Not open source. Copying, cloning, redistribution, reverse engineering, or derivative use is prohibited. */
-/*! TaskFlow proprietary software. Not open source. Copying, cloning, redistribution, reverse engineering, or derivative use is prohibited. */
+
 const STORAGE_KEY = "taskflow.tasks.v1"
   , THEME_KEY = "taskflow.theme.v1"
   , DENSITY_KEY = "taskflow.density.v1"
