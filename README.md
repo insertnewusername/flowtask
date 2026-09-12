@@ -1,13 +1,13 @@
 FLOWTASK <br>
 Flowtask is a task management system for you to organise your tasks, see your calendar, and have notifications sent to you!
 
+It's a fairly simple single page application with a backend of supabase, and hosted via firebase
 
-
-Url of my better website: flowtask-southbyte.web.app
+Url of my website: flowtask-southbyte.web.app
 
 This project was mainly for me to learn how to do kinda a backend, with supabase login, and storage of stuff
 
-AI was used to help me initially setup for this project, though linking to supabase and firebase was done all by me
+So I had AI help me initially setup for this project, though linking to supabase and firebase was done all by me
 
 I also set it up for firebase, so had to do a few stuff.
 
