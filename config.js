@@ -5,14 +5,10 @@ window.TASKFLOW_SUPABASE = {
 
 window.TASKFLOW_GOOGLE = {
   clientId: "9451179838-hacbjml6jol5errqfckr9lhcqhq90jpe.apps.googleusercontent.com",
-  // Optional Cloudflare Worker backend for long-lived Google Calendar sync.
-  // Example: "https://taskflow-calendar-sync.YOUR-SUBDOMAIN.workers.dev"
   calendarBackendUrl: "",
 };
 
 window.TASKFLOW_AI = {
-  // Add your Worker URL here after following the AI Assist setup instructions.
-  // Example: "https://taskflow-ai.YOUR-SUBDOMAIN.workers.dev"
   endpoint: "https://taskflow-ai-add.taskflowaiadd.workers.dev",
 };
 
